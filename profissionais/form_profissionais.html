@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>jobway - cadastro</title>
+    <style>
+        .container #logo img{
+            width: 120px;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-green-600 to-blue-400 text-white">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 mb-12">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div id="logo" class="flex items-center">
+                        <a href="../index.html" class="flex items-center space-x-2">
+                            <img  src="../logo3.png" alt="logo jobway" srcset="">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-blue-600 hover:text-blue-800 font-medium transition" data-i18n="home">Home</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="howItWorks">How It Works</a>
+                    <a href="./profissionais/para_profissionais.html" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="professionals">Professionals</a>
+                    <a href="./empresas/pag_empresas/para_empresas.html" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="companies">Companies</a>
+                    <a href="#resources" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="resources">Resources</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="flex border rounded-full overflow-hidden">
+                        <button class="language-toggle px-3 py-1 text-xs active" data-lang="en"><img src="https://flagcdn.com/w20/ca.png" alt="Canada Flag" class="language-flag"> </button>
+                        <button class="language-toggle px-3 py-1 text-xs" data-lang="pt"><img src="https://flagcdn.com/w20/br.png" alt="Brazil Flag" class="language-flag"></button>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-800">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-blue-600" data-i18n="home">Home</a>
+            <a href="#how-it-works" class="block py-2 text-gray-600" data-i18n="howItWorks">How It Works</a>
+            <a href="#professionals" class="block py-2 text-gray-600" data-i18n="professionals">Professionals</a>
+            <a href="#companies" class="block py-2 text-gray-600" data-i18n="companies">Companies</a>
+            <a href="#resources" class="block py-2 text-gray-600" data-i18n="resources">Resources</a>
+            <div class="flex space-x-4 pt-2">
+                <a href="#professionals-register" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium block text-center w-full" data-i18n="signUp">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Crie Seu Perfil</h2>
+    <p class="text-center text-gray-600 mb-8">Preencha com suas informações essenciais para começar sua jornada no Canadá!</p>
+
+    <form>
+        <div class="mb-5 mt-4">
+            <label for="nomeCompleto" class="block text-gray-700 text-sm font-medium mb-2">Nome Completo</label>
+            <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Seu nome completo" required
+                   class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out">
+        </div>
+
+        <div class="mb-5">
+            <label for="email" class="block text-gray-700 text-sm font-medium mb-2">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required
+                   class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out">
+        </div>
+
+        <div class="mb-5">
+            <label for="telefone" class="block text-gray-700 text-sm font-medium mb-2">Telefone (com DDD)</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required
+                   class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out">
+        </div>
+
+        <div class="mb-6">
+            <label for="areaInteresse" class="block text-gray-700 text-sm font-medium mb-2">Área de Interesse (Opcional)</label>
+            <select id="areaInteresse" name="areaInteresse"
+                    class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out">
+                <option value="">Selecione sua área principal</option>
+                <option value="tecnologia">Tecnologia/TI</option>
+                <option value="engenharia">Engenharia</option>
+                <option value="saude">Saúde</option>
+                <option value="financas">Finanças</option>
+                <option value="marketing">Marketing</option>
+                <option value="educacao">Educação</option>
+                <option value="outra">Outra</option>
+            </select>
+        </div>
+
+        <div class="flex items-center justify-center">
+            <button type="submit"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-200 ease-in-out w-full">
+                Crie Seu Perfil Grátis
+            </button>
+        </div>
+    </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form'); // Seleciona o primeiro formulário na página
+    const whatsappNumber = '558589500747'; // <-- SUBSTITUA PELO SEU NÚMERO DE WHATSAPP COM CÓDIGO DO PAÍS E DDD
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Coleta os valores dos campos
+        const nomeCompleto = document.getElementById('nomeCompleto').value;
+        const email = document.getElementById('email').value;
+        const telefone = document.getElementById('telefone').value;
+        const areaInteresse = document.getElementById('areaInteresse').value;
+
+        // Monta a mensagem para o WhatsApp
+        let message = `Olá! Tenho interesse em oportunidades de trabalho no Canadá.\n\n`;
+        message += `*Nome Completo:* ${nomeCompleto}\n`;
+        message += `*E-mail:* ${email}\n`;
+        message += `*Telefone:* ${telefone}\n`;
+        if (areaInteresse) { // Adiciona a área de interesse apenas se for preenchida
+            message += `*Área de Interesse:* ${areaInteresse}\n`;
+        }
+        message += `\nAguardo contato.`;
+
+        // Codifica a mensagem para ser usada na URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // Cria a URL do WhatsApp
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+        // Redireciona o usuário para o WhatsApp
+        window.open(whatsappURL, '_blank');
+    });
+});
+</script>
+</body>
+</html>
