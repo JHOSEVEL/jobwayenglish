@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cadastrar Vaga - JobWay</title>
+<link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+
+<section class="signup-section">
+    
+    <div class="container">
+        <div class="flex items-center">
+            <a href="../index.html" class="flex items-center space-x-2">
+                    <img id="logo" src="../logo3.png" alt="logo jobway" srcset="">
+            </a>
+        </div>
+        <h2>Cadastrar Vaga</h2>
+        <p>Conecte sua empresa aos melhores talentos brasileiros interessados em trabalhar no Canadá.</p>
+
+        <form id="jobForm">
+            <div class="form-group">
+            <label for="company">Nome da Empresa *</label>
+            <input type="text" id="company" name="company" required placeholder="Empresa XYZ Ltda" />
+            </div>
+
+            <div class="form-group">
+            <label for="position">Cargo Oferecido *</label>
+            <input type="text" id="position" name="position" required placeholder="Ex: Desenvolvedor Front-end" />
+            </div>
+
+            <div class="form-group">
+            <label for="type">Tipo de Vaga *</label>
+            <select id="type" name="type" required>
+                <option value="">Selecione</option>
+                <option value="Tempo Integral">Tempo Integral</option>
+                <option value="Meio Período">Meio Período</option>
+                <option value="Contrato Temporário">Contrato Temporário</option>
+                <option value="Remoto">Remoto</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+            <label for="location">Local de Trabalho</label>
+            <input type="text" id="location" name="location" placeholder="Toronto, Vancouver..." />
+            </div>
+
+            <div class="form-group">
+            <label for="requirements">Requisitos *</label>
+            <textarea cols="80" rows="10" resize="none" id="requirements" name="requirements" required placeholder="Habilidades, experiência necessária, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+            <label for="benefits">Benefícios</label>
+            <textarea  cols="80" rows="10" resize="none" id="benefits" name="benefits" placeholder="Plano de saúde, ajuda de custo, moradia..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">📨 Enviar Vaga via WhatsApp</button>
+            <p class="note">Ao clicar, a vaga será preparada e você será redirecionado para o WhatsApp.</p>
+        </form>
+    </div>
+</section>
+
+<script src="empresas.js"></script>
+</body>
+</html>

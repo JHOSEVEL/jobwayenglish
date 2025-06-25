@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobway Empresas</title>
+<link rel="stylesheet" href="style_empresas.css">
+<script defer src="script.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 36px;
+            height: calc(100% - 36px);
+            width: 2px;
+            background: #3b82f6;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .container #logo img{
+            width:120px;
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">  
+<!-- Hero Section -->
+
+<header class="bg-gradient-to-r from-green-600 to-blue-400 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-6">
+        <div class="flex justify-between items-center">
+            <div id="logo" class="flex items-center">
+                    <a href="../../index.html" class="flex items-center space-x-2">
+                        <img  src="./logo3 copy.png" alt="logo jobway" srcset="">
+                    </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="../../index.html" class="hover:text-blue-200 font-medium">Início</a>
+                <a href="../para_profissionais.html" class="hover:text-blue-200 font-medium">Processo</a>
+                <a href="../form-empresa/empresas.html" class="hover:text-blue-200 font-medium">Contato</a>
+            </nav>
+            <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+  <!-- hero -->
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-green-500 to-blue-300 text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">O Poder da Diversidade e Qualificação em Sua Equipe.</h1>
+                <p class="text-xl mb-8">Profissionais brasileiros trazem uma combinação única de habilidades técnicas, adaptabilidade e uma ética de trabalho sólida. Nossa plataforma simplifica a busca e a contratação desses talentos. </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button  class="bg-white text-blue-700 hover:bg-blue-100 px-6 py-3 rounded-lg font-bold transition duration-300">
+                        <a href="../empresas.html">comece Agora</a><i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <button class="border-2 border-white hover:bg-blue-600 px-6 py-3 rounded-lg font-bold transition duration-300">
+                        Saiba Mais
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                    alt="Profissionais no Canadá" 
+                    class="rounded-lg shadow-2xl max-w-full h-auto hover-scale">
+            </div>
+        </div>
+    </section>
+  <!-- fim hero -->
+  
+  <!-- Por Que Contratar Talentos Brasileiros -->
+<section class="benefits">
+    <div class="benefits-list">
+      <div class="benefit-item"><i class="fas fa-globe-americas"></i><span>Acesso a um Pool de Talentos Global</span></div>
+      <div class="benefit-item"><i class="fas fa-user-tie"></i><span>Profissionais Qualificados e Experientes</span></div>
+      <div class="benefit-item"><i class="fas fa-handshake"></i><span>Suporte Completo na Imigração</span></div>
+      <div class="benefit-item"><i class="fas fa-lightbulb"></i><span>Diversidade e Inovação</span></div>
+    </div>
+    <video class="w-1/1 h-1/1 aspect-video mt-8" controls>
+      <source src="../../imagens/guia_empresa-brazil.mp4" type="video/mp4">
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+</section>
+
+  <!-- Processo Inteligente -->
+<section class="process bg-gradient-to-r from-green-600 to-blue-400 text-white shadow-lg">
+    <h2 class="text-3xl text-center mb-8">Nosso Processo de Conexão Inteligente.</h2>
+    <div class="process-steps">
+      <div class="step"><i class="fas fa-clipboard-list"></i><h3 class="text-xl">Análise de Necessidades</h3><p>Entendemos as demandas específicas de sua vaga e o perfil ideal de profissional.</p></div>
+      <div class="step"><i class="fas fa-brain"></i><h3 class="text-xl">Conexão Inteligente (Nossa IA)</h3><p>Nossa IA seleciona e apresenta os profissionais mais adequados, com base em experiência, competências e afinidade cultural, Além das soft skills.</p></div>
+      <div class="step"><i class="fas fa-people-carry"></i><h3 class="text-xl">Suporte no Processo</h3><p>Oferecemos suporte contínuo para você e o profissional, desde a entrevista até a integração em sua equipe.</p></div>
+    </div>
+    <!-- <div class="process-image-placeholder"><img   alt="" srcset=""></div> -->
+    <video class="w-1/1 h-1/1 aspect-video mt-8" controls>
+      <source src="../../imagens/trajeto-empresa.mp4" type="video/mp4">
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+</section>
+
+  <!-- Recursos para Empresas -->
+<section class="resources text-white ">
+    <h2 class="text-x1 text-center mb-8">Informações Essenciais para Sua Contratação.</h2>
+    <div class="resource-cards">
+      <div class="card bg-gradient-to-r from-green-600 to-blue-400">
+        <div class="image-placeholder "><img src="../../imagens/foto2.jpg" alt="" srcset=""></div>
+        <h3 class="text-2xl text-gray-800">Guia de Contratação Internacional</h3>
+        <p>Entenda os requisitos legais e processos para contratação de talentos estrangeiros no Canadá.</p>
+        <button class="btn-secondary">Saiba Mais</button>
+      </div>
+      <div class="card bg-gradient-to-r from-green-600 to-blue-400 text-white">
+        <div class="image-placeholder"><img src="../../imagens/Gemini_Generated_Image_3do3d63do3d63do3.png" alt="" srcset=""></div>
+        <h3 class="text-2xl text-gray-800">Benefícios Fiscais e Incentivos</h3>
+        <p>Descubra programas de incentivo governamentais para empresas que contratam imigrantes.</p>
+        <button class="btn-secondary">Saiba Mais</button>
+      </div>
+      <div class="card bg-gradient-to-r from-green-600 to-blue-400 text-white">
+        <div class="image-placeholder"><img src="../../imagens/grupo-de-pessoas-diversas-tendo-uma-reuniao-de-negocios.jpg" alt="" srcset=""></div>
+        <h3 class="text-2xl text-gray-800">Integração Cultural</h3>
+        <p>Dicas para uma integração bem-sucedida de profissionais internacionais em sua equipe.</p>
+        <button class="btn-secondary">Saiba Mais</button>
+      </div>
+    </div>
+    <button  type="submit" class="btn-submit"><a href="../empresas.html">Fale Conosco</a></button>
+    <!-- <button class="btn-secondary">Ver Todos os Recursos para Empresas</button> -->
+</section>
+
+  <!-- Formulário de Contato -->
+<!-- <section class="contact-form">
+    <h2>Encontre Seu Próximo Grande Talento.</h2>
+    <p>Preencha o formulário e um de nossos consultores entrará em contato para entender suas necessidades de recrutamento.</p>
+    <form id="empresaForm">
+        <input type="text" placeholder="Nome da Empresa" name="empresa" required>
+        <input type="text" placeholder="Nome do Contato" name="contato" required>
+        <input type="email" placeholder="E-mail Corporativo" name="email" required>
+        <input type="tel" placeholder="Telefone (com DDD)" name="telefone" required>
+        <input type="text" placeholder="Cargo de Interesse" name="cargo" required>
+        <select name="quantidade" required>
+            <option value="">Número de Profissionais Desejados</option>
+            <option value="1-5">1-5</option>
+            <option value="6-10">6-10</option>
+            <option value="Mais de 10">Mais de 10</option>
+        </select>
+        <button type="submit" class="btn-submit">Fale Conosco</button>
+    </form>
+ </section> -->
+
+<!-- Rodapé -->
+<footer>
+<div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div id="logo" class="w-12 h-12  flex items-center justify-center text-white font-bold text-xl mb-4"><img src="./logo3 copy.png" alt="" srcset=""></div>
+                    <p data-i18n="footerAbout" class="mb-4">
+                        Bridging the talent gap between Brazil and Canada through efficient, ethical international recruitment.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4" data-i18n="footerForProfessionals">For Professionals</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerCreateProfile">Create Profile</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerJobSearch">Job Search</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerVisaGuide">Visa Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerRelocation">Relocation Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4" data-i18n="footerForCompanies">For Companies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerPostJob">Post a Job</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerBrowseTalent">Browse Talent</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerHire">Hire Through Us</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerLmia">LMIA Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4" data-i18n="footerContact">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span data-i18n="footerAddress">Florianopolis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <span>+55 (85) 98950-0747</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <span>jslbakbancobancodigital@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
+                <div class="mb-4 md:mb-0" data-i18n="footerCopyright">
+                    &copy; 2023 jobway Talent Bridge. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition" data-i18n="footerPrivacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="footerTerms">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="footerCookies">Cookie Policy</a>
+                </div>
+            </div>
+</div>
+</footer>
+<script src="./empresas_pag.js"></script>
+</body>
+</html>

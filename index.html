@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil-Canada Talent Bridge | Ponte de Talentos Brasil-Canadá</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2b6cb0',
+                        secondary: '#3182ce',
+                        accent: '#e53e3e',
+                        dark: '#1a202c',
+                        light: '#f7fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS */
+        .language-toggle {
+            transition: all 0.3s ease;
+        }
+        .language-toggle.active {
+            background-color: #4299e1;
+            color: white;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #75f983 0%, #04fb90 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .wave-shape .shape-fill {
+            fill: #ffffffc6;
+        }
+        .container #logo img{
+            width: 120px;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div id="logo" class="flex items-center">
+                        <a href="./index.html" class="flex items-center space-x-2">
+                            <img  src="./logo3.png" alt="logo jobway" srcset="">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-blue-600 hover:text-blue-800 font-medium transition" data-i18n="home">Home</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="howItWorks">How It Works</a>
+                    <a href="./profissionais/para_profissionais.html" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="professionals">Professionals</a>
+                    <a href="./empresas/pag_empresas/para_empresas.html" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="companies">Companies</a>
+                    <a href="#resources" class="text-gray-600 hover:text-blue-800 font-medium transition" data-i18n="resources">Resources</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="flex border rounded-full overflow-hidden">
+                        <button class="language-toggle px-3 py-1 text-xs active" data-lang="en"><img src="https://flagcdn.com/w20/ca.png" alt="Canada Flag" class="language-flag"> </button>
+                        <button class="language-toggle px-3 py-1 text-xs" data-lang="pt"><img src="https://flagcdn.com/w20/br.png" alt="Brazil Flag" class="language-flag"></button>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-800">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-blue-600" data-i18n="home">Home</a>
+            <a href="#how-it-works" class="block py-2 text-gray-600" data-i18n="howItWorks">How It Works</a>
+            <a href="#professionals" class="block py-2 text-gray-600" data-i18n="professionals">Professionals</a>
+            <a href="#companies" class="block py-2 text-gray-600" data-i18n="companies">Companies</a>
+            <a href="#resources" class="block py-2 text-gray-600" data-i18n="resources">Resources</a>
+            <div class="flex space-x-4 pt-2">
+                <a href="#professionals-register" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium block text-center w-full" data-i18n="signUp">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-green-600 to-blue-400 text-white shadow-lg relative overflow-hidden">
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-4 py-20 md:py-28 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+            
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="heroTitle">Connecting Brazilian Talent with Canadian Opportunities</h1>
+                    <p class="text-xl mb-8 opacity-90" data-i18n="heroSubtitle">
+                        We bridge the gap between qualified Brazilian professionals and Canadian companies looking for international talent.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="./profissionais/form_profissional/form.html" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium text-center transition" data-i18n="professionalSignUp">I'm a Professional</a>
+                        <a href="./empresas/empresas.html" class="bg-blue-800 text-white hover:bg-blue-900 px-6 py-3 rounded-lg font-medium text-center transition" data-i18n="companySignUp">We're Hiring</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80" alt="Professionals meeting" class="rounded-lg shadow-xl w-full max-w-md">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2" data-i18n="professionalsNumber">100+</div>
+                    <div class="text-gray-600" data-i18n="professionalsText">Qualified Professionals</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2" data-i18n="companiesNumber">50+</div>
+                    <div class="text-gray-600" data-i18n="companiesText">Canadian Companies</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2" data-i18n="successRate">85%</div>
+                    <div class="text-gray-600" data-i18n="successText">Successful Placement Rate</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2" data-i18n="countriesNumber">2</div>
+                    <div class="text-gray-600" data-i18n="countriesText">Countries Connected</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-800 mb-4" data-i18n="howItWorksTitle">How It Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="howItWorksSubtitle">
+                    Our simple three-step process makes international hiring seamless for both Brazilian professionals and Canadian employers.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center transition card-hover">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mx-auto mb-6">
+                        <i class="fas fa-user-plus text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="step1Title">Create Your Profile</h3>
+                    <p class="text-gray-600" data-i18n="step1Text">
+                        Professionals complete their profiles with skills, experience, and work authorization details.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center transition card-hover">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mx-auto mb-6">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="step2Title">Match With Opportunities</h3>
+                    <p class="text-gray-600" data-i18n="step2Text">
+                        Our AI connects professionals with suitable job openings based on experience and preferences.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center transition card-hover">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mx-auto mb-6">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="step3Title">Secure Your Future</h3>
+                    <p class="text-gray-600" data-i18n="step3Text">
+                        Complete the hiring process with our support for work permits and relocation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professionals Section -->
+    <section id="professionals" class="py-16 bg-gradient-to-r from-green-600 to-blue-400 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold text-white-800 mb-6" data-i18n="professionalsTitle">For Brazilian Professionals</h2>
+                    <p class="text-gray-600 mb-6" data-i18n="professionalsDescription">
+                        Take your career to Canada with our comprehensive support system. We help you navigate the entire process from application to relocation.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="professionalsBenefit1">Access to exclusive Canadian job opportunities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="professionalsBenefit2">Step-by-step work permit and immigration guidance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="professionalsBenefit3">Cultural preparation and language support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="professionalsBenefit4">Relocation assistance for you and your family</span>
+                        </li>
+                    </ul>
+                    <a href="./profissionais/form_profissional/form.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition" data-i18n="getStarted">Get Started</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80" alt="Professional woman working" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80" alt="Team meeting" class="rounded-lg shadow-xl w-full mb-10 md:mb-0">
+                </div>
+                <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+                    <h2 class="text-3xl font-bold text-green-800 mb-6" data-i18n="companiesTitle">For Canadian Companies</h2>
+                    <p class="text-gray-600 mb-6" data-i18n="companiesDescription">
+                        Access a pool of qualified Brazilian professionals who are ready to contribute to your team and help fill critical skill gaps in the Canadian labor market.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="companiesBenefit1">Streamlined international hiring process</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="companiesBenefit2">Pre-screened, qualified candidates in high-demand fields</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="companiesBenefit3">Guidance on work permits and LMIA requirements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700" data-i18n="companiesBenefit4">Diversity and fresh perspectives for your team</span>
+                        </li>
+                    </ul>
+                    <a href="./empresas/empresas.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition" data-i18n="hireNow">Hire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-i18n="successStories">Success Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="testimonialsSubtitle">
+                    Hear from professionals and employers who have benefited from our platform
+                </p>
+            </div>
+            
+            <!-- <div class="grid md:grid-cols-2 gap-8"> 
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Silva" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-lg">Ana Silva</h4>
+                            <p class="text-gray-600" data-i18n="anaPosition">Software Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic" data-i18n="anaTestimonial">
+                        "Brazil-Canada Bridge helped me secure a position in Toronto within 3 months. Their guidance on the visa process was invaluable - I couldn't have done it without them!"
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Thompson" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-lg">David Thompson</h4>
+                            <p class="text-gray-600" data-i18n="davidPosition">HR Director at MapleTech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic" data-i18n="davidTestimonial">
+                        "We've hired 5 engineers through this platform in the last year. The quality of candidates and the seamless hiring process exceeded our expectations."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-gradient-to-r from-green-600 to-blue-400 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white-800 mb-4" data-i18n="resourcesTitle">Helpful Resources</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="resourcesSubtitle">
+                    Everything you need to know about working in Canada as a Brazilian professional
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md transition card-hover">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-600 rounded-lg mb-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3" data-i18n="resource1Title">Work Visa Guide</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="resource1Text">
+                        Complete step-by-step guide to obtaining a Canadian work permit from Brazil.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium inline-flex items-center" data-i18n="learnMore">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md transition card-hover">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-600 rounded-lg mb-4">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3" data-i18n="resource2Title">Cost of Living</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="resource2Text">
+                        Detailed breakdown of living expenses in major Canadian cities.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium inline-flex items-center" data-i18n="learnMore">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md transition card-hover">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-600 rounded-lg mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3" data-i18n="resource3Title">Relocation Checklist</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="resource3Text">
+                        Everything you need to prepare before moving to Canada.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium inline-flex items-center" data-i18n="learnMore">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-blue-600 font-medium" data-i18n="viewAllResources">
+                    View All Resources <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration CTA Section -->
+    <section id="professionals-register" class="py-16 bg-white text-green-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6" data-i18n="ctaTitle">Ready to Start Your Canadian Journey?</h2>
+                <p class="text-xl mb-8 opacity-90" data-i18n="ctaSubtitle">
+                    Join thousands of Brazilian professionals who have found rewarding careers in Canada through our platform.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 text-white">
+                    <div class="bg-gradient-to-r from-green-600 to-blue-400 opacity-80 p-8 rounded-xl backdrop-filter backdrop-blur-sm border border-white border-opacity-20">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="professionalJoin">For Professionals</h3>
+                        <p class="mb-6" data-i18n="professionalJoinText">
+                            Create your free profile and get matched with Canadian job opportunities.
+                        </p>
+                        <a href="./profissionais/form_profissional/form.html"> <button id="professionals"  class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition w-full" data-i18n="signUpFree">Sign Up - It's Free </button></a>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-600 to-blue-400  p-8 rounded-xl backdrop-filter backdrop-blur-sm border border-white border-opacity-20">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="companyJoin">For Companies</h3>
+                        <p class="mb-6" data-i18n="companyJoinText">
+                            Access qualified Brazilian talent ready to work in Canada.
+                        </p>
+                        <a href="./empresas/empresas.html"><button id="company" class="bg-blue-700 text-white hover:bg-blue-800 px-6 py-3 rounded-lg font-medium transition w-full" data-i18n="requestDemo">publicar vaga</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Registration Form -->
+    <div id="professionalForm" class="hidden bg-white py-16 px-4 max-w-4xl mx-auto rounded-lg shadow-xl">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Professional Registration</h2>
+            <p class="text-gray-600">Create your profile to connect with Canadian employers</p>
+        </div>
+        <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label for="firstName" class="block text-gray-700 mb-2">First Name</label>
+                    <input type="text" id="firstName" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="lastName" class="block text-gray-700 mb-2">Last Name</label>
+                    <input type="text" id="lastName" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="password" class="block text-gray-700 mb-2">Password</label>
+                <input type="password" id="password" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="profession" class="block text-gray-700 mb-2">Profession</label>
+                <select id="profession" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">Select your profession</option>
+                    <option value="software">Software Developer</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="healthcare">Healthcare Professional</option>
+                    <option value="designer">Designer</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="experience" class="block text-gray-700 mb-2">Years of Experience</label>
+                <input type="number" id="experience" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="terms" class="mr-2">
+                <label for="terms" class="text-gray-700">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition">Complete Registration</button>
+        </form>
+    </div>
+
+    <!-- Company Registration Form -->
+    <div id="companyForm" class="hidden bg-white py-16 px-4 max-w-4xl mx-auto rounded-lg shadow-xl">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Company Registration</h2>
+            <p class="text-gray-600">Request access to our talent database</p>
+        </div>
+        <form class="space-y-6">
+            <div>
+                <label for="companyName" class="block text-gray-700 mb-2">Company Name</label>
+                <input type="text" id="companyName" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="companyEmail" class="block text-gray-700 mb-2">Company Email</label>
+                <input type="email" id="companyEmail" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="industry" class="block text-gray-700 mb-2">Industry</label>
+                <select id="industry" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">Select your industry</option>
+                    <option value="tech">Technology</option>
+                    <option value="finance">Finance</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="message" class="block text-gray-700 mb-2">Tell us about your hiring needs</label>
+                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition">Request Demo</button>
+        </form>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gradient-to-r from-green-600 to-blue-400 ">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-i18n="faqTitle">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="faqSubtitle">
+                    Find answers to common questions about our platform
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                        <h3 class="font-medium text-lg text-gray-800" data-i18n="faqQuestion1">How does the matching process work?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2">
+                        <p class="text-gray-600" data-i18n="faqAnswer1">
+                            Our AI-powered platform matches your skills, experience, and preferences with suitable Canadian job openings. Employers receive ranked candidates based on job requirements, and you receive personalized job recommendations.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                        <h3 class="font-medium text-lg text-gray-800" data-i18n="faqQuestion2">What types of jobs are available?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2">
+                        <p class="text-gray-600" data-i18n="faqAnswer2">
+                            We specialize in tech, engineering, healthcare, and skilled trades roles that are in high demand in Canada. Most positions require at least 2 years of professional experience and often offer work visa sponsorship.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                        <h3 class="font-medium text-lg text-gray-800" data-i18n="faqQuestion3">How long does the process take?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2">
+                        <p class="text-gray-600" data-i18n="faqAnswer3">
+                            The hiring process typically takes 2-4 months from initial contact to job offer. Visa processing times vary but expect 2-6 months depending on the type of work permit. We provide guidance throughout the entire process to keep things moving smoothly.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                        <h3 class="font-medium text-lg text-gray-800" data-i18n="faqQuestion4">Do you charge any fees to professionals?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2">
+                        <p class="text-gray-600" data-i18n="faqAnswer4">
+                            No, creating a profile and accessing job opportunities is completely free for professionals. Employers pay placement fees only after successful hires. You're responsible for standard government visa fees and relocation costs.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                        <h3 class="font-medium text-lg text-gray-800" data-i18n="faqQuestion5">What support do you provide after relocation?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2">
+                        <p class="text-gray-600" data-i18n="faqAnswer5">
+                            We offer comprehensive post-arrival support including help with housing, banking, healthcare registration, and cultural orientation. Our team connects you with Brazilian communities in your new city and remains available for questions during your transition.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div id="logo" class="w-12 h-12  flex items-center justify-center text-white font-bold text-xl mb-4"><img src="./logo3.png" alt="" srcset=""></div>
+                    <p data-i18n="footerAbout" class="mb-4">
+                        Bridging the talent gap between Brazil and Canada through efficient, ethical international recruitment.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4" data-i18n="footerForProfessionals">For Professionals</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerCreateProfile">Create Profile</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerJobSearch">Job Search</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerVisaGuide">Visa Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerRelocation">Relocation Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4" data-i18n="footerForCompanies">For Companies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerPostJob">Post a Job</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerBrowseTalent">Browse Talent</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerHire">Hire Through Us</a></li>
+                        <li><a href="#" class="hover:text-white transition" data-i18n="footerLmia">LMIA Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4" data-i18n="footerContact">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span data-i18n="footerAddress">Florianopolis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <span>+55 (85) 98950-0747</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <span>jslbakbancobancodigital@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
+                <div class="mb-4 md:mb-0" data-i18n="footerCopyright">
+                    &copy; 2023 jobway Talent Bridge. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition" data-i18n="footerPrivacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="footerTerms">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="footerCookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform-rotate-180');
+            });
+        });
+
+        // Language toggle functionality
+        const translations = {
+            en: {
+                home: "Home",
+                howItWorks: "How It Works",
+                professionals: "For Professionals",
+                companies: "For Companies",
+                resources: "Resources",
+                signUp: "Sign Up",
+                heroTitle: "Connecting Brazilian Talent with Canadian Opportunities",
+                heroSubtitle: "We bridge the gap between qualified Brazilian professionals and Canadian companies looking for international talent.",
+                professionalSignUp: "I'm a Professional",
+                companySignUp: "We're Hiring",
+                howItWorksTitle: "How It Works",
+                howItWorksSubtitle: "Our simple three-step process makes international hiring seamless for both Brazilian professionals and Canadian employers.",
+                step1Title: "Create Your Profile",
+                step1Text: "Professionals complete their profiles with skills, experience, and work authorization details.",
+                step2Title: "Match With Opportunities",
+                step2Text: "Our AI connects professionals with suitable job openings based on experience and preferences.",
+                step3Title: "Secure Your Future",
+                step3Text: "Complete the hiring process with our support for work permits and relocation.",
+                professionalsTitle: "For Brazilian Professionals",
+                professionalsDescription: "Take your career to Canada with our comprehensive support system. We help you navigate the entire process from application to relocation.",
+                professionalsBenefit1: "Access to exclusive Canadian job opportunities",
+                professionalsBenefit2: "Step-by-step work permit and immigration guidance",
+                professionalsBenefit3: "Cultural preparation and language support",
+                professionalsBenefit4: "Relocation assistance for you and your family",
+                getStarted: "Get Started",
+                companiesTitle: "For Canadian Companies",
+                companiesDescription: "Access a pool of qualified Brazilian professionals who are ready to contribute to your team and help fill critical skill gaps in the Canadian labor market.",
+                companiesBenefit1: "Streamlined international hiring process",
+                companiesBenefit2: "Pre-screened, qualified candidates in high-demand fields",
+                companiesBenefit3: "Guidance on work permits and LMIA requirements",
+                companiesBenefit4: "Diversity and fresh perspectives for your team",
+                hireNow: "Hire Now",
+                successStories: "Success Stories",
+                testimonialsSubtitle: "Hear from professionals and employers who have benefited from our platform",
+                anaPosition: "Software Developer at TechCorp Canada",
+                anaTestimonial: `"Brazil-Canada Bridge helped me secure a position in Toronto within 3 months. Their guidance on the visa process was invaluable - I couldn't have done it without them!"`,
+                davidPosition: "HR Director at MapleTech Solutions",
+                davidTestimonial: `"We've hired 5 engineers through this platform in the last year. The quality of candidates and the seamless hiring process exceeded our expectations."`,
+                resourcesTitle: "Helpful Resources",
+                resourcesSubtitle: "Everything you need to know about working in Canada as a Brazilian professional",
+                resource1Title: "Work Visa Guide",
+                resource1Text: "Complete step-by-step guide to obtaining a Canadian work permit from Brazil.",
+                resource2Title: "Cost of Living",
+                resource2Text: "Detailed breakdown of living expenses in major Canadian cities.",
+                resource3Title: "Relocation Checklist",
+                resource3Text: "Everything you need to prepare before moving to Canada.",
+                learnMore: "Learn More",
+                viewAllResources: "View All Resources",
+                ctaTitle: "Ready to Start Your Canadian Journey?",
+                ctaSubtitle: "Join thousands of Brazilian professionals who have found rewarding careers in Canada through our platform.",
+                professionalJoin: "For Professionals",
+                professionalJoinText: "Create your profile and get matched with Canadian job opportunities.",
+                signUpFree: "Sign Up ",
+                companyJoin: "For Companies",
+                companyJoinText: "Access qualified Brazilian talent ready to work in Canada.",
+                requestDemo: "Request a Demo",
+                faqTitle: "Frequently Asked Questions",
+                faqSubtitle: "Find answers to common questions about our platform",
+                faqQuestion1: "How does the matching process work?",
+                faqAnswer1: "Our AI-powered platform matches your skills, experience, and preferences with suitable Canadian job openings. Employers receive ranked candidates based on job requirements, and you receive personalized job recommendations.",
+                faqQuestion2: "What types of jobs are available?",
+                faqAnswer2: "We specialize in tech, engineering, healthcare, and skilled trades roles that are in high demand in Canada. Most positions require at least 2 years of professional experience and often offer work visa sponsorship.",
+                faqQuestion3: "How long does the process take?",
+                faqAnswer3: "The hiring process typically takes 2-4 months from initial contact to job offer. Visa processing times vary but expect 2-6 months depending on the type of work permit. We provide guidance throughout the entire process to keep things moving smoothly.",
+                faqQuestion4: "Do you charge any fees to professionals?",
+                faqAnswer4: "No, creating a profile and accessing job opportunities is completely free for professionals. Employers pay placement fees only after successful hires. You're responsible for standard government visa fees and relocation costs.",
+                faqQuestion5: "What support do you provide after relocation?",
+                faqAnswer5: "We offer comprehensive post-arrival support including help with housing, banking, healthcare registration, and cultural orientation. Our team connects you with Brazilian communities in your new city and remains available for questions during your transition.",
+                footerAbout: "Bridging the talent gap between Brazil and Canada through efficient, ethical international recruitment.",
+                footerForProfessionals: "For Professionals",
+                footerCreateProfile: "Create Profile",
+                footerJobSearch: "Job Search",
+                footerVisaGuide: "Visa Guide",
+                footerRelocation: "Relocation Support",
+                footerForCompanies: "For Companies",
+                footerPostJob: "Post a Job",
+                footerBrowseTalent: "Browse Talent",
+                footerHire: "Hire Through Us",
+                footerLmia: "LMIA Support",
+                footerContact: "Contact Us",
+                footerAddress: "123 Canada Street, Toronto, ON M5V 1J8",
+                footerCopyright: "&copy; 2023 Brazil-Canada Talent Bridge. All rights reserved.",
+                footerPrivacy: "Privacy Policy",
+                footerTerms: "Terms of Service",
+                footerCookies: "Cookie Policy",
+                professionalsNumber: "100+",
+                professionalsText: "Qualified Professionals",
+                companiesNumber: "50+",
+                companiesText: "Canadian Companies",
+                successRate: "85%",
+                successText: "Successful Placement Rate",
+                countriesNumber: "2",
+                countriesText: "Countries Connected"
+            },
+            pt: {
+                home: "Início",
+                howItWorks: "Como Funciona",
+                professionals: "Para Profissionais",
+                companies: "Para Empresas",
+                resources: "Recursos",
+                signUp: "Cadastre-se",
+                heroTitle: "Conectando  Brasileiros a Oportunidades de tratablho no Canadá",
+                heroSubtitle: "Fazemos a ponte entre profissionais brasileiros qualificados e empresas canadenses que buscam talentos internacionais.",
+                professionalSignUp: "Sou Profissional",
+                companySignUp: "Estamos Contratando",
+                howItWorksTitle: "Como Funciona",
+                howItWorksSubtitle: "Nosso processo simples de três etapas torna a contratação internacional tranquila para profissionais brasileiro e empregadores canadense.",
+                step1Title: "Crie Seu Perfil",
+                step1Text: "Profissionais completam seus perfis com experiência profissional e soft skills.",
+                step2Title: "Conecte-se a Oportunidades",
+                step2Text: "Nossa IA conecta profissionais a vagas adequadas com base em experiência, preferências e nivel de perfil na jobway.",
+                step3Title: "Garanta Seu Futuro",
+                step3Text: "Faça parte do processo de contratação com nosso suporte para visto, cursos e moradia.",
+                professionalsTitle: "Para Profissionais Brasileiros",
+                professionalsDescription: "Leve sua carreira para o Canadá com nosso sistema de apoio completo. Ajudamos você em todo o processo, desde a aplicação até a mudança.",
+                professionalsBenefit1: "Acesso a oportunidades exclusivas no Canadá",
+                professionalsBenefit2: "Orientação passo a passo para visto de trabalho e cursos",
+                professionalsBenefit3: "Preparação cultural e suporte linguístico",
+                professionalsBenefit4: "Assistência Desde o primeiro passo!",
+                getStarted: "Comece Agora",
+                companiesTitle: "Para Empresas Canadenses",
+                companiesDescription: "Acesse uma rede de profissionais brasileiros qualificados prontos para contribuir com sua equipe e preencher lacunas de habilidades críticas no mercado de trabalho canadense.",
+                companiesBenefit1: "Processo de contratação internacional simplificado",
+                companiesBenefit2: "Candidatos pré-selecionados e qualificados em áreas de alta demanda",
+                companiesBenefit3: "Orientação sobre vistos de trabalho e requisitos de LMIA",
+                companiesBenefit4: "Diversidade e novas perspectivas para sua equipe",
+                hireNow: "Contrate Agora",
+                successStories: "Histórias de Sucesso",
+                testimonialsSubtitle: "Depoimentos de profissionais e empregadores que se beneficiaram de nossa plataforma",
+                anaPosition: "Desenvolvedora de Software na TechCorp Canadá",
+                anaTestimonial: `"O Brazil-Canada Bridge me ajudou a conseguir uma posição em Toronto em 3 meses. Sua orientação sobre o processo de visto foi inestimável - eu não teria conseguido sem eles!"`,
+                davidPosition: "Diretor de RH na MapleTech Solutions",
+                davidTestimonial: `"Contratamos 5 engenheiros por esta plataforma no último ano. A qualidade dos candidatos e o processo de contratação superaram nossas expectativas."`,
+                resourcesTitle: "Recursos Úteis",
+                resourcesSubtitle: "Tudo o que você precisa saber sobre trabalhar no Canadá como profissional brasileiro",
+                resource1Title: "Guia de Visto de Trabalho",
+                resource1Text: "Guia passo a passo completo para obter um visto de trabalho canadense a partir do Brasil.",
+                resource2Title: "Custo de Vida",
+                resource2Text: "Detalhamento completo de custos de vida nas principais cidades canadenses.",
+                resource3Title: "Checklist de Mudança",
+                resource3Text: "Tudo o que você precisa preparar antes de se mudar para o Canadá.",
+                learnMore: "Saiba Mais",
+                viewAllResources: "Ver Todos os Recursos",
+                ctaTitle: "Pronto para Começar sua Jornada Canadense?",
+                ctaSubtitle: "Junte-se a milhares de profissionais brasileiros que encontraram carreiras gratificantes no Canadá através de nossa plataforma.",
+                professionalJoin: "Para Profissionais",
+                professionalJoinText: "Crie seu perfil e seja conectado a oportunidades no Canadá.",
+                signUpFree: "Cadastre-se",
+                companyJoin: "Para Empresas",
+                companyJoinText: "Acesse talentos brasileiros qualificados prontos para trabalhar no Canadá.",
+                requestDemo: "Solicitar Demonstração",
+                faqTitle: "Perguntas Frequentes",
+                faqSubtitle: "Encontre respostas para perguntas comuns sobre nossa plataforma",
+                faqQuestion1: "Como funciona o processo de matching?",
+                faqAnswer1: "Nossa plataforma com IA combina suas habilidades, experiência e preferências com oportunidades de trabalho canadenses adequadas. Empregadores recebem candidatos ranqueados com base nos requisitos da vaga, e você recebe recomendações de vagas personalizadas.",
+                faqQuestion2: "Que tipos de vagas estão disponíveis?",
+                faqAnswer2: "Especializamo-nos em tecnologia, engenharia, saúde e profissões técnicas em alta demanda no Canadá. A maioria das posições requer pelo menos 2 anos de experiência profissional e muitas oferecem patrocínio para visto de trabalho.",
+                faqQuestion3: "Quanto tempo demora o processo?",
+                faqAnswer3: "O processo de contratação geralmente leva de 2 a 4 meses desde o primeiro contato até a oferta de trabalho. Os tempos de processamento de visto variam, mas espere de 2 a 6 meses dependendo do tipo de visto de trabalho. Fornecemos orientação durante todo o processo para manter tudo em movimento.",
+                faqQuestion4: "Vocês cobram alguma taxa dos profissionais?",
+                faqAnswer4: "Não, criar um perfil e acessar oportunidades de trabalho é completamente gratuito para profissionais. Empregadores pagam taxas de colocação apenas após contratações bem-sucedidas. Você é responsável por taxas governamentais padrão de visto e custos de realocação.",
+                faqQuestion5: "Que suporte vocês oferecem após a mudança?",
+                faqAnswer5: "Oferecemos suporte abrangente pós-chegada, incluindo ajuda com moradia, banco, registro no sistema de saúde e orientação cultural. Nossa equipe conecta você com comunidades brasileiras em sua nova cidade e permanece disponível para dúvidas durante sua transição.",
+                footerAbout: "Reduzindo a lacuna de talentos entre Brasil e Canadá por meio de recrutamento internacional eficiente e ético.",
+                footerForProfessionals: "Para Profissionais",
+                footerCreateProfile: "Criar Perfil",
+                footerJobSearch: "Buscar Vagas",
+                footerVisaGuide: "Guia de Vistos",
+                footerRelocation: "Suporte à Mudança",
+                footerForCompanies: "Para Empresas",
+                footerPostJob: "Postar Vaga",
+                footerBrowseTalent: "Buscar Talentos",
+                footerHire: "Contrate Por Nós",
+                footerLmia: "Suporte LMIA",
+                footerContact: "Contato",
+                footerAddress: "123 Rua Canadá, Toronto, ON M5V 1J8",
+                footerCopyright: "&copy; 2023 Brazil-Canada Talent Bridge. Todos os direitos reservados.",
+                footerPrivacy: "Política de Privacidade",
+                footerTerms: "Termos de Serviço",
+                footerCookies: "Política de Cookies",
+                professionalsNumber: "100+",
+                professionalsText: "Profissionais Qualificados",
+                companiesNumber: "50+",
+                companiesText: "Empresas Canadenses",
+                successRate: "85%",
+                successText: "Taxa de Colocação",
+                countriesNumber: "2",
+                countriesText: "Países Conectados"
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update active language button
+            document.querySelectorAll('.language-toggle').forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Smooth transition effect
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.classList.add('fade-in');
+                setTimeout(() => el.classList.remove('fade-in'), 500);
+            });
+        }
+
+        // Language toggle click event
+        document.querySelectorAll('.language-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                setLanguage(lang);
+            });
+        });
+
+        // Initialize with English
+        setLanguage('en');
+
+        // Form display functions
+        function showProfessionalForm() {
+            document.getElementById('professionalForm').classList.remove('hidden');
+            document.getElementById('companyForm').classList.add('hidden');
+            document.getElementById('professionalForm').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showCompanyForm() {
+            document.getElementById('companyForm').classList.remove('hidden');
+            document.getElementById('professionalForm').classList.add('hidden');
+            document.getElementById('companyForm').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
